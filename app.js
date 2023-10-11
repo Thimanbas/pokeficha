@@ -93,10 +93,10 @@ const catType = new Map([["physical", "Images/PhysicalIC.png"], ["special", "Ima
 //create pokemon image
 function createImage(imageFrontSrc) {
     let image = `
-    <img id = "pokemon-front-image" src = "${imageFrontSrc}"></img>
+    <img crossorigin="anonymous" id = "pokemon-front-image" src = "${imageFrontSrc}"></img>
     `
     let image2 = `
-    <img id = "pokemon-front-image-pre" src = "${imageFrontSrc}"></img>
+    <img  crossorigin="anonymous" id = "pokemon-front-image-pre" src = "${imageFrontSrc}"></img>
     `
     pokemonImage.innerHTML = image;
     pokemonPreImage.innerHTML = image2;
@@ -105,12 +105,12 @@ function createImage(imageFrontSrc) {
 //create pokemon type
 function createType(typeOne, typeTwo) {
     let imgOne = `
-        <img src = "${typeMap.get(typeOne)}"></img>
+        <img crossorigin="anonymous" src = "${typeMap.get(typeOne)}"></img>
         `
     pokemonTypeOne.innerHTML = imgOne;
     if (typeTwo != null) {
         let imgTwo = `
-        <img src = "${typeMap.get(typeTwo)}"></img>
+        <img crossorigin="anonymous" src = "${typeMap.get(typeTwo)}"></img>
         `
         pokemonTypeTwo.innerHTML = imgTwo;
     }
@@ -120,13 +120,13 @@ function createType(typeOne, typeTwo) {
 function createGender(gender) {
     if (gender == "male") {
         let imgOne = `
-        <img src = "Images/male.png"></img>
+        <img crossorigin="anonymous" src = "Images/male.png"></img>
         `
         pokemonGender.innerHTML = imgOne;
     }
     if (gender == "female") {
         let imgOne = `
-        <img src = "Images/female.png"></img>
+        <img crossorigin="anonymous" src = "Images/female.png"></img>
         `
         pokemonGender.innerHTML = imgOne;
     }

@@ -1000,5 +1000,9 @@ body {
   @page{
     size: A2;
     size: landscape;
+    
+  }
+  body{
+    background-color: transparent;
   }
 }
