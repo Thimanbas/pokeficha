@@ -166,10 +166,12 @@ body {
 }
 #pokemon-front-image-pre {
   min-height: 158px;
+  min-width: 158px;
   max-height: 158px;
   max-width: 158px;
   border: 3px solid rgba(255, 255, 255, 0.423);
   border-radius: 50px;
+  background-color:rgba(255, 255, 255, 0.423);
 }
 #input-pre-img{
   display: flex;
@@ -189,6 +191,7 @@ body {
   font-size: 20px;
   color: white;
   box-shadow: 0 10px 15px black;
+  padding-top: 1px;
 }
 #pre-ability {
   margin: 10px auto;
@@ -205,7 +208,9 @@ body {
 }
 #poke-status-container{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin: 10px auto;
+  height: 80%;
 }
 #pre-ability th {
   border: 2px solid rgba(0, 0, 0, 0.742);
@@ -424,8 +429,9 @@ body {
 }
 
 #poke-level-info {
-  margin-left: 110px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
 }
 #poke-level{
   display: flex;
@@ -451,9 +457,9 @@ body {
 
 #poke-exp,
 #poke-nvl,
-#poke-aff {
+#poke-aff
+ {
   height: 40px;
-  margin-top: 12px;
   background-color: rgba(146, 183, 237, 0.734);
   width: 200px;
   border-radius: 20px;
@@ -463,15 +469,14 @@ body {
 }
 
 #poke-kda {
-  margin-top: 30px;
-  margin-bottom: 10px;
   background-color: rgba(146, 183, 237, 0.734);
   width: 150px;
   height: 80px;
   border-radius: 20px;
   border: 4px solid rgba(96, 12, 12, 0.785);
   box-shadow: inset 0 0px 15px rgb(63, 1, 1);
-
+  margin: 20px auto;
+  text-align: center;
 }
 
 #poke-image {
@@ -562,6 +567,7 @@ body {
   height: 28px;
   margin-top: 5px;
   border-radius: 55px;
+  overflow: hidden;
 
 }
 
@@ -600,30 +606,53 @@ body {
   padding-left: 50px;
   padding-top: 20px;
   overflow: hidden;
-  width: 380px;
-  height: 550px;
+  width: 500px;
+  height: 100%;
 
 }
 .poke-status #section-name{
   width: 200px;
 }
 
-.poke-status div {
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.422);
-  width: 390px;
+.stat-cont{
+  display:flex;
+  flex-direction: row;
 }
-
-
-#poke-stat-container div {
-  margin-bottom: 15px;
+.progress-bar{
+  width: 255px;
+  height: 30px;
+  border-radius: 50px;
+  border: 3px solid black;
+  box-shadow: inset 0 10px 10px rgb(19, 27, 80);
+  overflow: hidden;
+}
+.progress-bar div{
+  height: 100%;
+  background-color: rgb(201, 38, 38);
+  box-shadow: inset 0 10px 10px rgba(19, 27, 80, 0.56);
 
 }
+.stat-ficha{
+  display: flex;
+  flex-direction: row;
 
+}
+#stat{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px dotted rgba(95, 94, 94, 0.6);
+  height: 50px;
+  margin-bottom: 10px;
+}
+#stat-other{
+  border-bottom: 2px dotted rgba(95, 94, 94, 0.6);
+  height: 50px;
+  margin-bottom: 10px;
+}
 #poke-stat-container {
   font-size: 22px;
-  margin: auto 10px;
-  width: 50%;
-  margin-bottom: 20px;
+  width: 90%;
   height: 581px;
   overflow: hidden;
 }
@@ -738,7 +767,6 @@ body {
 
 #deepblue-stat {
   color: rgb(3, 34, 117);
-
 }
 
 #red-stat {

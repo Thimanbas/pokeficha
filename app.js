@@ -1,4 +1,3 @@
-
 const inputHp = document.querySelector('#input-poke-hp')
 const inputAtk = document.querySelector('#input-poke-atk')
 const inputDef = document.querySelector('#input-poke-def')
@@ -9,6 +8,7 @@ const inputHit = document.querySelector('#input-poke-hit')
 const inputDdg = document.querySelector('#input-poke-ddg')
 const inputCrt = document.querySelector('#input-poke-crt')
 const inputKda = document.querySelector('#input-poke-kda')
+const Kda = document.querySelector('#kda')
 
 const statusArr = [inputHp, inputAtk, inputDef, inputSpAtk, inputSpDef, inputSpe, inputHit, inputDdg, inputCrt]
 
@@ -76,16 +76,16 @@ const fichaPokemon = document.querySelector('.ficha')
 
 
 //pokemon type images
-const typeMap = new Map([["bug", "Images/BugIC_SV.png"], ["dark", "Images/DarkIC_SV.png"], ["dragon", "Images/DragonIC_SV.png"], ["electric", "Images/ElectricIC_SV.png"],
-["fairy", "Images/FairyIC_SV.png"], ["fighting", "Images/FightingIC_SV.png"], ["fire", "Images/FireIC_SV.png"], ["flying", "Images/FlyingIC_SV.png"], ["ghost", "Images/GhostIC_SV.png"],
-["grass", "Images/GrassIC_SV.png"], ["ground", "Images/GroundIC_SV.png"], ["ice", "Images/IceIC_SV.png"], ["normal", "Images/NormalIC_SV.png"], ["poison", "Images/PoisonIC_SV.png"],
-["psychic", "Images/PsychicIC_SV.png"], ["rock", "Images/RockIC_SV.png"], ["steel", "Images/SteelIC_SV.png"], ["water", "Images/WaterIC_SV.png"]]);
+const typeMap = new Map([["bug", "Images/Types/BugIC_SV.png"], ["dark", "Images/Types/DarkIC_SV.png"], ["dragon", "Images/Types/DragonIC_SV.png"], ["electric", "Images/Types/ElectricIC_SV.png"],
+["fairy", "Images/Types/FairyIC_SV.png"], ["fighting", "Images/Types/FightingIC_SV.png"], ["fire", "Images/Types/FireIC_SV.png"], ["flying", "Images/Types/FlyingIC_SV.png"], ["ghost", "Images/Types/GhostIC_SV.png"],
+["grass", "Images/Types/GrassIC_SV.png"], ["ground", "Images/Types/GroundIC_SV.png"], ["ice", "Images/Types/IceIC_SV.png"], ["normal", "Images/Types/NormalIC_SV.png"], ["poison", "Images/Types/PoisonIC_SV.png"],
+["psychic", "Images/Types/PsychicIC_SV.png"], ["rock", "Images/Types/RockIC_SV.png"], ["steel", "Images/Types/SteelIC_SV.png"], ["water", "Images/Types/WaterIC_SV.png"],[null, "Images/Types/noneIC_SV.png"]]);
 
 const statChanger = new Map([["hp", "Hp:"], ["attack", "Attack:"], ["defense", "Defense:"], ["special-attack", "Sp. Atk:"], ["special-defense", "Sp. Def: "],
 ["speed", "Speed:"], ["hit", "Hit:"], ["ddg", "Dodge:"], ["crt", "Critical:"]
 ])
 
-const catType = new Map([["physical", "Images/PhysicalIC.png"], ["special", "Images/SpecialIC.png"], ["status", "Images/StatusIC.png"]
+const catType = new Map([["physical", "Images/Icons/PhysicalIC.png"], ["special", "Images/Icons/SpecialIC.png"], ["status", "Images/Icons/StatusIC.png"]
 ])
 
 
@@ -120,33 +120,44 @@ function createType(typeOne, typeTwo) {
 function createGender(gender) {
     if (gender == "male") {
         let imgOne = `
-        <img crossorigin="anonymous" src = "Images/male.png"></img>
+        <img crossorigin="anonymous" src = "Images/Icons/male.png"></img>
         `
         pokemonGender.innerHTML = imgOne;
     }
     if (gender == "female") {
         let imgOne = `
-        <img crossorigin="anonymous" src = "Images/female.png"></img>
+        <img crossorigin="anonymous" src = "Images/Icons/female.png"></img>
         `
         pokemonGender.innerHTML = imgOne;
     }
 }
-
+function createStatusBar(statName, statBlue, statRed) {
+    statPct = (((parseInt(statBlue) * 10) + parseInt(statRed)) / 255) * 100
+    let stat = document.getElementById(`${statName}`);
+    stat.style.width = `${statPct}%`
+}
 //create pokemon status
 function createStatus(statName, statValueBlue, statValueRed) {
     if (statName != "crt" && statName != "hit" && statName != "ddg") {
         let stat = `
-        
-        <div><spam id = "deepblue-stat">${statChanger.get(statName)}</spam> 
-        <spam id = "blue-stat">${statValueBlue}</spam><spam  id = "red-stat">${statValueRed}</spam>
-        <div id="natural-buff">${naturalBuff}</div>
+        <div id="stat">
+            <div class='stat-ficha'><spam id = "deepblue-stat">${statChanger.get(statName)}</spam> 
+            <spam id = "blue-stat">${statValueBlue}</spam><spam  id = "red-stat">${statValueRed}</spam>
+            <div id="natural-buff">${naturalBuff}</div>
+        </div>
+        <div class = "progress-bar">
+            <div id = '${statName}'></div>
+        </div>
         `
+
         pokemonStatus.innerHTML += stat;
+        createStatusBar(statName, statValueBlue, statValueRed)
+
     }
     if (statName == "crt" || statName == "hit" || statName == "ddg") {
         let stat = `
         
-        <div><spam id = "deepblue-stat">${statChanger.get(statName)}</spam> 
+        <div id ="stat-other"><spam id = "deepblue-stat">${statChanger.get(statName)}</spam> 
         <spam id = "blue-stat">${statValueBlue}${statValueRed}%</spam>
         <div id="natural-buff">${naturalBuff}</div>
         `
@@ -203,7 +214,10 @@ let pokemonPic = document.getElementById("pokemon-front-image-pre")
 let inputFile = document.getElementById("input-poke-img")
 
 inputFile.onchange = function () {
+    let x = document.getElementById("pokemon-front-image-pre");
+    x.src = URL.createObjectURL(inputFile.files[0]);
     pokemonPic.src = URL.createObjectURL(inputFile.files[0]);
+
 }
 
 
@@ -218,6 +232,10 @@ function checkPokemon(pokeName, preSearch) {
             let abilityUnchecked = [];
             pokemonName.textContent = data['name'].toUpperCase()
             if (preSearch == false) {
+
+
+
+
                 pokemonId.innerHTML = `<div id = "deepblue-stat">National Nº </div><div id = "blue-stat"> ${data["id"]}</div>`
                 moveHandler(data["moves"], haveEggMoves.checked);
 
@@ -235,15 +253,14 @@ function checkPokemon(pokeName, preSearch) {
                 }
 
                 if (pokemonPic.src == "") {
-                    createImage(data['sprites']['front_default']);
+                    createImage(`Images/Pokemons/other/official-artwork//${data['id']}.png`);
                 } else {
-                    createImage(pokemonPic.src);
+                    createImage(`${pokemonPic.src}`);
                 }
 
 
                 let typeOne = document.getElementById("type-one-select").value;
                 let typeTwo = document.getElementById("type-two-select").value;
-                console.log(data["types"])
                 switch (typeTwo) {
                     case "-1": {
                         if (typeOne == "-1") {
@@ -454,7 +471,7 @@ function checkPokemon(pokeName, preSearch) {
             }
             if (preSearch == true) {
                 if (pokemonPic.src == "") {
-                    createImage(data['sprites']['front_default']);
+                    createImage(`Images/Pokemons/other/official-artwork/${data['id']}.png`);
 
                 }
                 for (i = 0; i < data['abilities'].length; i++) {
@@ -471,6 +488,9 @@ function checkPokemon(pokeName, preSearch) {
                         item.textContent = data['name'].toUpperCase();
                     })
                 }
+            }
+            if (inputKda.value != "") {
+                Kda.innerHTML = inputKda.value;
             }
         })
 }
@@ -750,7 +770,6 @@ generatePokemon.addEventListener('click', () => {
             item.hidden = true;
         })
     }
-    console.log(document.getElementById("type-one-select").value)
     //hide()
 
 })

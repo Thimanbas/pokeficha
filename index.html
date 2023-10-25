@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokeficha</title>
     <link href="style.css" rel="stylesheet">
-
+  
 </head>
 
-<body onload="//hide()">
+<body onload="//hide()" id = "pagina">
     <div class="cabe">
         <div class="searchbar">
             <input id="input-pokemon-name" type="text" onfocus="this.placeholder=''"
                 placeholder="Pokemon name or ID..."></input>
             <button type="submit" id="search-button">
-                <img src="images/search-svgrepo-com.svg">
+                <img src="images/Icons/search-svgrepo-com.svg">
 
             </button>
         </div>
@@ -23,8 +24,7 @@
 
     <div class="pre-ficha">
         <div class="question">
-            <div>Nomeie seu pokemon(opcional)</div>
-            <div><input id="input-trainer-name"></div>
+            <div><input id="input-trainer-name" placeholder="Nome do pokemon"></div>
             <div id = "input-pre-img">
                 <input type = "file" accept = "image/jpeg, image/png/ image/jpg" id = "input-poke-img"></input>
                 <label for = "input-poke-img">Mude a imagem</label>
@@ -38,7 +38,7 @@
         <div class="question">
             <div class="status-section">Status do seu pokemon(opcional)</div>
             <div class="status">
-                <h3>V/D/A:</h3><input id="input-poke-kda" onfocus="this.placeholder=''" placeholder="ex: 10/2/5...">
+                <h3>V/D/A:</h3><input id="input-poke-kda" type="text" placeholder="ex: 10/2/5...">
             </div>
             <div class="status">
                 <h3>Nivel:</h3><input id="input-poke-nvl" type="number">
@@ -216,6 +216,13 @@
         </div>
 
     </div>
+
+
+
+
+
+
+   
     
     <div class="ficha" id="ficha">
 
@@ -225,24 +232,24 @@
                 <div id="section-name">Damage Taken</div>
                 <table>
                     <tr>
-                        <th><img src="Images/NormalIC_Big.png"></th>
-                        <th><img src="Images/FireIC_Big.png"></th>
-                        <th><img src="Images/WaterIC_Big.png"></th>
-                        <th><img src="Images/ElectricIC_Big.png"></th>
-                        <th><img src="Images/GrassIC_Big.png"></th>
-                        <th><img src="Images/IceIC_Big.png"></th>
-                        <th><img src="Images/FightingIC_Big.png"></th>
-                        <th><img src="Images/PoisonIC_Big.png"></th>
-                        <th><img src="Images/GroundIC_Big.png"></th>
-                        <th><img src="Images/FlyingIC_Big.png"></th>
-                        <th><img src="Images/PsychicIC_Big.png"></th>
-                        <th><img src="Images/BugIC_Big.png"></th>
-                        <th><img src="Images/RockIC_Big.png"></th>
-                        <th><img src="Images/GhostIC_Big.png"></th>
-                        <th><img src="Images/DragonIC_Big.png"></th>
-                        <th><img src="Images/DarkIC_Big.png"></th>
-                        <th><img src="Images/SteelIC_Big.png"></th>
-                        <th><img src="Images/FairyIC_Big.png"></th>
+                        <th><img src="Images/Types/NormalIC_Big.png"></th>
+                        <th><img src="Images/Types/FireIC_Big.png"></th>
+                        <th><img src="Images/Types/WaterIC_Big.png"></th>
+                        <th><img src="Images/Types/ElectricIC_Big.png"></th>
+                        <th><img src="Images/Types/GrassIC_Big.png"></th>
+                        <th><img src="Images/Types/IceIC_Big.png"></th>
+                        <th><img src="Images/Types/FightingIC_Big.png"></th>
+                        <th><img src="Images/Types/PoisonIC_Big.png"></th>
+                        <th><img src="Images/Types/GroundIC_Big.png"></th>
+                        <th><img src="Images/Types/FlyingIC_Big.png"></th>
+                        <th><img src="Images/Types/PsychicIC_Big.png"></th>
+                        <th><img src="Images/Types/BugIC_Big.png"></th>
+                        <th><img src="Images/Types/RockIC_Big.png"></th>
+                        <th><img src="Images/Types/GhostIC_Big.png"></th>
+                        <th><img src="Images/Types/DragonIC_Big.png"></th>
+                        <th><img src="Images/Types/DarkIC_Big.png"></th>
+                        <th><img src="Images/Types/SteelIC_Big.png"></th>
+                        <th><img src="Images/Types/FairyIC_Big.png"></th>
                     </tr>
                     <tr id="table-damage">
                     </tr>
@@ -287,12 +294,16 @@
 
 
             <div id="status-pokemon">
+                <div id="poke-kda">
+                    <div> V/D/A</div>
+                    <div id="kda">0/0/0</div>
+                </div>
                 <div id="poke-level-info">
-
-                    <div id="poke-kda">
-                        <div> V/D/A</div>
-                        <div id="kda">0/0/0</div>
-                    </div>
+                    <div id="poke-nvl">Nivel: 1</div>
+                    
+                    <div id="poke-exp">Exp: 0</div>
+                    
+                    <div id="poke-aff">Afeição: 0</div>
 
 
                 </div>
@@ -301,12 +312,16 @@
 
                         <div id="section-name">Base stats:</div>
                         <div id="poke-stat-container">
-                            <div id="stat-name">Hp: </div><br>
-                            <div id="stat-name">Attack: </div><br>
-                            <div id="stat-name">Defense: </div><br>
-                            <div id="stat-name">Sp. Atk: </div><br>
-                            <div id="stat-name">Sp. Def: </div><br>
-                            <div id="stat-name">Speed: </div><br>
+                            <div class="stat-ficha">
+                                <div id="stat-name">Hp: </div>
+                                
+                            </div>
+                            
+                            <div id="stat-name">Attack: </div>
+                            <div id="stat-name">Defense: </div>
+                            <div id="stat-name">Sp. Atk: </div>
+                            <div id="stat-name">Sp. Def: </div>
+                            <div id="stat-name">Speed: </div>
                             <div id="stat-name">Total: </div>
 
                             <div id="poke-stat-chances">
@@ -315,15 +330,10 @@
                                 <div id="crt-stat">Critical: 0%</div>
                             </div>
                         </div>
-
-
-                    </div>
-                    <div id="poke-level">
-                        <div id="poke-aff">Afeição: 0</div>
-                        <div id="poke-nvl">Nivel:0</div>
-                        <div id="poke-exp">Exp: 0</div>
+                        
 
                     </div>
+                    
                 </div>
 
             </div>
@@ -422,30 +432,27 @@
 
 
     </div>
+
     <div id = "pdf-container"> 
         <button onclick="geraPdf()" id = "pdf-button">Gerar ficha!</button>
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js" ></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
     <script src="./app.js"></script>
     <script src="./natures.js"></script>
     <script src="./types.js"></script>
     <script src="./moves.js"></script>
     <script>
         async function geraPdf(){
-            var downloading = document.getElementById("ficha")
-            var doc = new jsPDF('l', 'pt');
-
-            await html2canvas(downloading, {
-                allowTaint: true,
-                useCORS: true,
-                willReadFrequently: true
-            }).then((canvas) =>{
-                doc.addImage(canvas.toDataURL("image/png"), 'PNG', 0,0);
-            })
-            doc.save("Document.pdf");
+            domtoimage.toBlob(document.getElementById('ficha'))
+            .then(function (blob) {
+                window.saveAs(blob, 'ficha.png');
+            });
+          
         }
     </script>
 </body>
