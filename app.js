@@ -770,7 +770,7 @@ generatePokemon.addEventListener('click', () => {
             item.hidden = true;
         })
     }
-    //hide()
+    hide()
 
 })
 
