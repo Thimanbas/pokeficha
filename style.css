@@ -561,8 +561,8 @@ body {
 
 }
 
-#poke-typeone,
-#poke-typetwo {
+#poke-typeone-box,
+#poke-typetwo-box {
   border: 5px solid rgba(96, 12, 12, 0.785);
   height: 28px;
   margin-top: 5px;
@@ -637,7 +637,7 @@ body {
   flex-direction: row;
 
 }
-#stat{
+.stat{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -645,7 +645,7 @@ body {
   height: 50px;
   margin-bottom: 10px;
 }
-#stat-other{
+.stat-other{
   border-bottom: 2px dotted rgba(95, 94, 94, 0.6);
   height: 50px;
   margin-bottom: 10px;
@@ -761,11 +761,11 @@ body {
   color: rgb(0, 166, 255);
 }
 
-#blue-stat {
+.blue-stat {
   color: rgb(0, 68, 255);
 }
 
-#deepblue-stat {
+.deepblue-stat {
   color: rgb(3, 34, 117);
 }
 
@@ -980,7 +980,8 @@ body {
   justify-content: space-around;
   
 }
-#tutor-confirm,#tutor-refresh,#tm-confirm,#tm-refresh{
+#tutor-confirm,#tutor-refresh,#tm-confirm,#tm-refresh,
+#tutor-confirm-ficha,#tutor-refresh-ficha,#tm-confirm-ficha,#tm-refresh-ficha{
   height: 35px;
   width: 100px;
   background-color: #08a52772;

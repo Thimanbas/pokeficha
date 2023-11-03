@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokeficha</title>
+    <link href="/styleIndex.css" rel="stylesheet">
+
+</head>
+<body>
+    <container>
+        <div id ="cont-text">
+            <p>Faça sua escolha</p>
+        </div>
+        <div class = "cont">
+            <div >
+                <button id = "create-ficha-btn" onclick="create()"></button>
+                <label for = "create-ficha-btn">
+                    <div class ="choice-box">
+                        <spam>
+                            <p>Criar</p>
+                        </spam>
+                        <img src = "/Images/Icons/button_Create.png">
+                    </div>
+                </label>
+            </div>
+            <div >
+                <button id = "update-ficha-btn" onclick="update()"></button>
+                <label for = "update-ficha-btn">
+                    <div class ="choice-box">
+                        <spam>
+                            <p>Editar</p>
+                        </spam>
+                        <img src = "/Images/Icons/button_update.png">
+    
+                    </div>
+                </label>
+            </div>
+        </div>
+        
+    </container>
+</body>
+<script>
+    function create(){
+        window.location.href = "/create.html";
+    }
+    function update(){
+        window.location.href = "/./ficha.html";
+
+    }
+
+</script>
+</html>

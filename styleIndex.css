@@ -1,0 +1,93 @@
+body {
+
+  margin: 0;
+  padding: 0;
+  background-color: rgb(161, 161, 161);
+  font-weight: 800;
+}
+
+
+container {
+  background-color: rgb(192, 70, 70);
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  min-height: 450px;
+  border-radius: 50px;
+  margin: 10% auto;
+ 
+  box-shadow: 0 15px  35px black;
+  
+}
+#cont-text p{
+  color: white;
+  margin-bottom: 0;
+  font-size: 40px;
+  border-bottom: 5px solid white;
+}
+#cont-text{
+  width: 500px;
+  text-align: center;
+}
+.cont{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+
+}
+
+.pre-ficha::-webkit-scrollbar {
+  width: 10px;
+}
+
+.pre-ficha::-webkit-scrollbar-thumb {
+  background: rgb(7, 53, 53);
+  border-radius: 0 15px 15px 0;
+}
+
+.pre-ficha::-webkit-scrollbar-thumb:hover {
+  background: rgb(3, 26, 26);
+
+}
+container img{
+  max-width: 220px;
+  
+}
+container div{
+  margin: auto;
+
+}
+#create-ficha-btn{
+  display: none;
+}
+#update-ficha-btn{
+  display: none;
+}
+.choice-box{
+  max-height: 220px;
+  cursor: pointer;
+  border: 5px solid black;
+  border-radius: 50px;
+  overflow: hidden;
+
+}
+.choice-box spam{
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 39px;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.348);
+  backdrop-filter: blur(3px);
+  color:white;
+  text-align: center;
+}
+.choice-box spam p{
+  margin-top: 65px;
+  font-size: 60px;
+}
+.choice-box:hover spam{
+  display: block;
+
+}

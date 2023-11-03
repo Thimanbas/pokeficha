@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="changes-container">
+
+
+
+        <div id="poke-basic-box" class="change-box">
+            <input type="text" class="input-container" id="rename-pokemon" placeholder="Nomeie seu pokemon...">
+
+            <input type="file" id="poke-pic-input" accept="image/*">
+            <label for="poke-pic-input">
+                <div id="poke-pic-container">
+                    <spam>
+                        <p>Selecionar imagem</p>
+                    </spam>
+                    <img id="poke-pic">
+                </div>
+            </label>
+            <div id="types-form">
+                <form id="type-one-form">
+                    Type 1:
+                    <select name="type-one-select" id="type-one-select">
+                        <option value="-1">Original</option>
+                        <option value="0">Nenhum</option>
+                        <option value="normal">Normal</option>
+                        <option value="fire">Fire</option>
+                        <option value="water">Water</option>
+                        <option value="electric">Eletric</option>
+                        <option value="grass">Grass</option>
+                        <option value="ice">Ice</option>
+                        <option value="fighting">Fight</option>
+                        <option value="poison">Poison</option>
+                        <option value="ground">Ground</option>
+                        <option value="flying">Flying</option>
+                        <option value="psychic">Psychic</option>
+                        <option value="bug">Bug</option>
+                        <option value="rock">Rock</option>
+                        <option value="ghost">Ghost</option>
+                        <option value="dragon">Dragon</option>
+                        <option value="dark">Dark</option>
+                        <option value="steel">Steel</option>
+                        <option value="fairy">Fairy</option>
+                    </select>
+
+                </form>
+
+                <form id="type-two-form">
+                    Type 2:
+
+                    <select name="type-two-select" id="type-two-select">
+                        <option value="-1">Original</option>
+                        <option value="0">Nenhum</option>
+                        <option value="normal">Normal</option>
+                        <option value="fire">Fire</option>
+                        <option value="water">Water</option>
+                        <option value="electric">Eletric</option>
+                        <option value="grass">Grass</option>
+                        <option value="ice">Ice</option>
+                        <option value="fighting">Fight</option>
+                        <option value="poison">Poison</option>
+                        <option value="ground">Ground</option>
+                        <option value="flying">Flying</option>
+                        <option value="psychic">Psychic</option>
+                        <option value="bug">Bug</option>
+                        <option value="rock">Rock</option>
+                        <option value="ghost">Ghost</option>
+                        <option value="dragon">Dragon</option>
+                        <option value="dark">Dark</option>
+                        <option value="steel">Steel</option>
+                        <option value="fairy">Fairy</option>
+                    </select>
+
+                </form>
+
+
+            </div>
+            <div id="ability">
+                <table id="ability-table" class="table">
+                    <tr>
+                        <th><input type="radio"></th>
+                        <th class="table-name">Ability</th>
+                        <th class="table-name" id="table-effect">Effect</th>
+                    </tr>
+
+
+                </table>
+            </div>
+
+        </div>
+
+
+        <div id="poke-info-box" class="change-box">
+            <div class="status-info">
+                <spam>V/D/A:</spam> <input type="text" id="vda-input" class="input-container">
+            </div>
+            <div class="status-info">
+                <spam>Nivel:</spam> <input type="number" id="nvl-input" class="input-container">
+            </div>
+            <div class="status-info">
+                <spam>Exp.:</spam> <input type="number" id="exp-input" class="input-container">
+            </div>
+            <div class="status-info">
+                <spam>Afeição:</spam> <input type="number" id="aff-input" class="input-container">
+            </div>
+            <div class="status-info">
+                <spam>Hp:</spam> <input type="number" id="hp-input" class="input-container">
+            </div>
+            <div class="status-info">
+                <spam>Attack:</spam> <input type="number" id="atk-input" class="input-container">
+            </div>
+            <div class="status-info">
+                <spam>Defense:</spam> <input type="number" id="def-input" class="input-container">
+            </div>
+            <div class="status-info">
+                <spam>Sp. Atk:</spam> <input type="number" id="spatak-input" class="input-container">
+            </div>
+            <div class="status-info">
+                <spam>Sp. Def:</spam> <input type="number" id="spdef-input" class="input-container">
+            </div>
+            <div class="status-info">
+                <spam>Speed:</spam> <input type="number" id="spe-input" class="input-container">
+            </div>
+            <div class="status-info">
+                <spam>Hit:</spam> <input type="number" id="hit-input" class="input-container">
+            </div>
+            <div class="status-info">
+                <spam>Dodge:</spam> <input type="number" id="ddg-input" class="input-container">
+            </div>
+            <div class="status-info">
+                <spam>Critical:</spam> <input type="number" id="crt-input" class="input-container">
+            </div>
+        </div>
+
+
+
+
+        <div id="poke-advanced-box" class="change-box">
+            <div id="nature-container">
+                <form id="nature-form">
+                    <div class="status-section">Quer mudar a nature?</div>
+                    <select name="nature" id="nature">
+                        <option value="0">Original</option>
+                        <option value="1">T1 - Inflexível, 1X Def</option>
+                        <option value="2">T2 - Dócil,1X Sp. Def</option>
+                        <option value="3">T3 - Alegre, 1X Speed</option>
+                        <option value="4">T4 - Corajoso, 15% Hit</option>
+                        <option value="5">T5 - Solitário, 10% Crit</option>
+                        <option value="6">T6 - Cuidadoso, 1X Sp. Atk</option>
+                        <option value="7">T7 - Atrevido, 15% DDG</option>
+                        <option value="8">T8 - Valente, 1X Attack</option>
+                        <option value="9">T9 - Tranquilo, 1X HP</option>
+                    </select>
+
+                </form>
+            </div>
+            <div id="trainer-move-container">
+                <div class="status-section">Quer adicionar alguma habilidade extra?</div>
+                <button type="submit" id="move-add-btn">+</button>
+
+                <table class="table" id="trainer-move-table">
+                    <tr>
+                        <th class="table-name">Move:</th>
+                        <th class="table-name">Descrição:</th>
+                    </tr>
+
+                    <tr>
+                        <td><input type="text" class="input-container" id="trainer-move-name-input" /></td>
+                        <td><textarea type="text" class="textarea-container" id="trainer-move-desc-input"></textarea>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <div id="tutor-moves-container" class="change-box">
+
+            <div id="tutor-moves-button">
+                <button type="submit" id="tutor-confirm-ficha">Confirm</button>
+                <button type="submit" id="tutor-refresh-ficha">Refresh</button>
+            </div>
+            <table id="tutor-move-table" class="table">
+                <tr>
+                    <th class="table-name"><input type="checkbox" checked /></th>
+                    <th class="table-name">Type</th>
+                    <th class="table-name">Class</th>
+                    <th class="table-name move-name">Name</th>
+                    <th class="table-name">Power</th>
+                    <th class="table-name">Acc</th>
+                </tr>
+
+            </table>
+        </div>
+
+
+
+
+        <div id="files-box" class="change-box">
+            <input type="file" id="inputFile" accept="text/html">
+            <label for="inputFile">
+                <div id="file-box">
+                    <spam>
+                        <p>Selecione sua ficha aqui.</p>
+                    </spam>
+                </div>
+            </label>
+            <button id="update-ficha-btn" type="submit" onclick="update()"></button>
+            <label for="update-ficha-btn">
+                <div id="update-ficha-box">
+                    <spam>
+                        <p>Atualizar</p>
+                    </spam>
+
+                </div>
+            </label>
+            <button id="download-ficha-btn" type="submit" onclick="download()"></button>
+            <label for="download-ficha-btn">
+                <div id="download-ficha-box">
+                    <spam>
+                        <p>Download</p>
+                    </spam>
+                </div>
+            </label>
+        </div>
+
+
+
+
+        <div id="tm-moves-container" class="change-box">
+            <div id="tm-moves-button">
+                <button type="submit" id="tm-confirm-ficha">Confirm</button>
+                <button type="submit" id="tm-refresh-ficha">Refresh</button>
+            </div>
+            <table id="tm-move-table" class="table">
+                <tr>
+                    <th class="table-name"><input type="checkbox" checked /></th>
+                    <th class="table-name">Type</th>
+                    <th class="table-name">Class</th>
+                    <th class="table-name move-name" id="tm-move-name">Name</th>
+                    <th class="table-name">Power</th>
+                    <th class="table-name">Acc</th>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+    </div>
+    <div id="conteudoFicha"></div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+<script src="./app2.js"></script>
+<script src="/index page/moves.js"></script>
+<script src="/index page/types.js"></script>
+<script src="/index page/natures.js"></script>
+
+<script>
+
+</script>
+
+</html>
