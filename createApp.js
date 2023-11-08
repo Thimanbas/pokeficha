@@ -109,13 +109,13 @@ function createType(typeOne, typeTwo) {
 function createGender(gender) {
     if (gender == "male") {
         let imgOne = `
-        <img crossorigin="anonymous" src = "/images/Icons/male.png"></img>
+        <img crossorigin="anonymous" src = "images/Icons/male.png"></img>
         `
         pokemonGender.innerHTML = imgOne;
     }
     if (gender == "female") {
         let imgOne = `
-        <img crossorigin="anonymous" src = "/images/Icons/female.png"></img>
+        <img crossorigin="anonymous" src = "images/Icons/female.png"></img>
         `
         pokemonGender.innerHTML = imgOne;
     }
