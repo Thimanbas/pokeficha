@@ -57,32 +57,32 @@ function createLevelMove(moveName, moveListLength) {
         if (moveLevelList[0][i].power != "null" && moveLevelList[0][i].accuracy != "null") {
 
             let move = `
-            <tr class = "move"><td>${moveLevelList[0][i].level}</td><td><img crossorigin="anonymous" src = "${typeMap.get(moveLevelList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveLevelList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveLevelList[0][i].name}</td>  
+            <tr class = "move"><td>${moveLevelList[0][i].level}</td><td><img  src = "${typeMap.get(moveLevelList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveLevelList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveLevelList[0][i].name}</td>  
              <td>${moveLevelList[0][i].power}</td> <td>${moveLevelList[0][i].accuracy}</td></tr>
             `
             pokemonLevelMoves.innerHTML += move;
         }
         if (moveLevelList[0][i].power == "null" && moveLevelList[0][i].accuracy != "null") {
             let move = `
-            <tr class = "move"><td>${moveLevelList[0][i].level}</td><td><img crossorigin="anonymous" src = "${typeMap.get(moveLevelList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveLevelList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveLevelList[0][i].name}</td>  
+            <tr class = "move"><td>${moveLevelList[0][i].level}</td><td><img  src = "${typeMap.get(moveLevelList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveLevelList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveLevelList[0][i].name}</td>  
              <td>${"-"}</td> <td>${moveLevelList[0][i].accuracy}</td></tr>
             `
             pokemonLevelMoves.innerHTML += move;
         }
         if (moveLevelList[0][i].power != "null" && moveLevelList[0][i].accuracy == "null") {
             let move = `
-            <tr class = "move"><td>${moveLevelList[0][i].level}</td><td><img crossorigin="anonymous" src = "${typeMap.get(moveLevelList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveLevelList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveLevelList[0][i].name}</td>  
+            <tr class = "move"><td>${moveLevelList[0][i].level}</td><td><img  src = "${typeMap.get(moveLevelList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveLevelList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveLevelList[0][i].name}</td>  
              <td>${moveLevelList[0][i].power}</td> <td>${"-"}</td></tr>
             `
             pokemonLevelMoves.innerHTML += move;
         }
         if (moveLevelList[0][i].power == "null" && moveLevelList[0][i].accuracy == "null") {
             let move = `
-            <tr class = "move"><td>${moveLevelList[0][i].level}</td><td><img crossorigin="anonymous" src = "${typeMap.get(moveLevelList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveLevelList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveLevelList[0][i].name}</td>  
+            <tr class = "move"><td>${moveLevelList[0][i].level}</td><td><img  src = "${typeMap.get(moveLevelList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveLevelList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveLevelList[0][i].name}</td>  
              <td>${"-"}</td> <td>${"-"}</td></tr>
             `
             pokemonLevelMoves.innerHTML += move;
@@ -111,32 +111,32 @@ function createEggMove(moveName, moveListLength) {
         if (moveEggList[0][i].power != "null" && moveEggList[0][i].accuracy != "null") {
 
             let move = `
-            <tr class = "move"><td><img crossorigin="anonymous" src = "${typeMap.get(moveEggList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveEggList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveEggList[0][i].name}</td>  
+            <tr class = "move"><td><img  src = "${typeMap.get(moveEggList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveEggList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveEggList[0][i].name}</td>  
              <td>${moveEggList[0][i].power}</td> <td>${moveEggList[0][i].accuracy}</td></tr>
             `
             pokemonEggMoves.innerHTML += move;
         }
         if (moveEggList[0][i].power == "null" && moveEggList[0][i].accuracy != "null") {
             let move = `
-            <tr class = "move"><td><img crossorigin="anonymous" src = "${typeMap.get(moveEggList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveEggList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveEggList[0][i].name}</td>  
+            <tr class = "move"><td><img  src = "${typeMap.get(moveEggList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveEggList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveEggList[0][i].name}</td>  
              <td>${"-"}</td> <td>${moveEggList[0][i].accuracy}</td></tr>
             `
             pokemonEggMoves.innerHTML += move;
         }
         if (moveEggList[0][i].power != "null" && moveEggList[0][i].accuracy == "null") {
             let move = `
-            <tr class = "move"><td><img crossorigin="anonymous" src = "${typeMap.get(moveEggList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveEggList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveEggList[0][i].name}</td>  
+            <tr class = "move"><td><img  src = "${typeMap.get(moveEggList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveEggList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveEggList[0][i].name}</td>  
              <td>${moveEggList[0][i].power}</td> <td>${"-"}</td></tr>
             `
             pokemonEggMoves.innerHTML += move;
         }
         if (moveEggList[0][i].power == "null" && moveEggList[0][i].accuracy == "null") {
             let move = `
-            <tr class = "move"><td><img crossorigin="anonymous" src = "${typeMap.get(moveEggList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveEggList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveEggList[0][i].name}</td>  
+            <tr class = "move"><td><img  src = "${typeMap.get(moveEggList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveEggList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveEggList[0][i].name}</td>  
              <td>${"-"}</td> <td>${"-"}</td></tr>
             `
             pokemonEggMoves.innerHTML += move;
@@ -165,32 +165,32 @@ function createTutorMove(moveName, moveListLength) {
         if (moveTutorList[0][i].power != "null" && moveTutorList[0][i].accuracy != "null") {
 
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img  src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
              <td>${moveTutorList[0][i].power}</td> <td>${moveTutorList[0][i].accuracy}</td></tr>
             `
             pokemonTutorMoves.innerHTML += move;
         }
         if (moveTutorList[0][i].power == "null" && moveTutorList[0][i].accuracy != "null") {
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img  src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
              <td>${"-"}</td> <td>${moveTutorList[0][i].accuracy}</td></tr>
             `
             pokemonTutorMoves.innerHTML += move;
         }
         if (moveTutorList[0][i].power != "null" && moveTutorList[0][i].accuracy == "null") {
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img  src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
              <td>${moveTutorList[0][i].power}</td> <td>${"-"}</td></tr>
             `
             pokemonTutorMoves.innerHTML += move;
         }
         if (moveTutorList[0][i].power == "null" && moveTutorList[0][i].accuracy == "null") {
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img  src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
              <td>${"-"}</td> <td>${"-"}</td></tr>
             `
             pokemonTutorMoves.innerHTML += move;
@@ -219,32 +219,32 @@ function createTmMove(moveName, moveListLength) {
         if (moveTmList[0][i].power != "null" && moveTmList[0][i].accuracy != "null") {
 
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img  src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
              <td>${moveTmList[0][i].power}</td> <td>${moveTmList[0][i].accuracy}</td></tr>
             `
             pokemonTmMoves.innerHTML += move;
         }
         if (moveTmList[0][i].power == "null" && moveTmList[0][i].accuracy != "null") {
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img  src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
              <td>${"-"}</td> <td>${moveTmList[0][i].accuracy}</td></tr>
             `
             pokemonTmMoves.innerHTML += move;
         }
         if (moveTmList[0][i].power != "null" && moveTmList[0][i].accuracy == "null") {
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img  src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
              <td>${moveTmList[0][i].power}</td> <td>${"-"}</td></tr>
             `
             pokemonTmMoves.innerHTML += move;
         }
         if (moveTmList[0][i].power == "null" && moveTmList[0][i].accuracy == "null") {
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img  src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
+             <img   id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
              <td>${"-"}</td> <td>${"-"}</td></tr>
             `
             pokemonTmMoves.innerHTML += move;
@@ -556,32 +556,32 @@ function createTutorMoveFicha(moveName, moveListLength) {
         if (moveTutorList[0][i].power != "null" && moveTutorList[0][i].accuracy != "null") {
 
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img  src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
              <td>${moveTutorList[0][i].power}</td> <td>${moveTutorList[0][i].accuracy}</td></tr>
             `
             pokeTutorTable.innerHTML += move;
         }
         if (moveTutorList[0][i].power == "null" && moveTutorList[0][i].accuracy != "null") {
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img  src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
              <td>${"-"}</td> <td>${moveTutorList[0][i].accuracy}</td></tr>
             `
             pokeTutorTable.innerHTML += move;
         }
         if (moveTutorList[0][i].power != "null" && moveTutorList[0][i].accuracy == "null") {
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img  src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
              <td>${moveTutorList[0][i].power}</td> <td>${"-"}</td></tr>
             `
             pokeTutorTable.innerHTML += move;
         }
         if (moveTutorList[0][i].power == "null" && moveTutorList[0][i].accuracy == "null") {
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTutorList[0][i].name}" id = "tutor-checkbox"></td><td><img  src = "${typeMap.get(moveTutorList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTutorList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTutorList[0][i].name}</td>  
              <td>${"-"}</td> <td>${"-"}</td></tr>
             `
             pokeTutorTable.innerHTML += move;
@@ -607,32 +607,32 @@ function createTmMoveFicha(moveName, moveListLength) {
         if (moveTmList[0][i].power != "null" && moveTmList[0][i].accuracy != "null") {
 
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img  src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
              <td>${moveTmList[0][i].power}</td> <td>${moveTmList[0][i].accuracy}</td></tr>
             `
             pokeTmTable.innerHTML += move;
         }
         if (moveTmList[0][i].power == "null" && moveTmList[0][i].accuracy != "null") {
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img  src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
              <td>${"-"}</td> <td>${moveTmList[0][i].accuracy}</td></tr>
             `
             pokeTmTable.innerHTML += move;
         }
         if (moveTmList[0][i].power != "null" && moveTmList[0][i].accuracy == "null") {
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img  src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
+             <img  id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
              <td>${moveTmList[0][i].power}</td> <td>${"-"}</td></tr>
             `
             pokeTmTable.innerHTML += move;
         }
         if (moveTmList[0][i].power == "null" && moveTmList[0][i].accuracy == "null") {
             let move = `
-            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img crossorigin="anonymous" src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
-             <img crossorigin="anonymous" crossorigin="anonymous" id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
+            <tr class = "move"><td><input type="checkbox" value = "${moveTmList[0][i].name}" id = "tm-checkbox"></td><td><img  src = "${typeMap.get(moveTmList[0][i].type)}"></img></td><td> 
+             <img   id = "damage-class" src = "${catType.get(moveTmList[0][i].damageClass)}"></img></td>  <td class = "move-name">${moveTmList[0][i].name}</td>  
              <td>${"-"}</td> <td>${"-"}</td></tr>
             `
             pokeTmTable.innerHTML += move;

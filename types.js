@@ -20,12 +20,12 @@ var types = new Array(
     [1, 0.5, 1, 1, 1, 1, 2, 0.5, 1, 1, 1, 1, 1, 1, 2, 2, 0.5, 1, 1],// Fairy
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]// None
 );
-const typeMap = new Map([["bug", "images/Types/BugIC_SV.png"], ["dark", "/images/Types/DarkIC_SV.png"], ["dragon", "/images/Types/DragonIC_SV.png"], ["electric", "/images/Types/ElectricIC_SV.png"],
-["fairy", "/images/Types/FairyIC_SV.png"], ["fighting", "/images/Types/FightingIC_SV.png"], ["fire", "/images/Types/FireIC_SV.png"], ["flying", "/images/Types/FlyingIC_SV.png"], ["ghost", "/images/Types/GhostIC_SV.png"],
-["grass", "/images/Types/GrassIC_SV.png"], ["ground", "/images/Types/GroundIC_SV.png"], ["ice", "/images/Types/IceIC_SV.png"], ["normal", "/images/Types/NormalIC_SV.png"], ["poison", "/images/Types/PoisonIC_SV.png"],
-["psychic", "/images/Types/PsychicIC_SV.png"], ["rock", "/images/Types/RockIC_SV.png"], ["steel", "/images/Types/SteelIC_SV.png"], ["water", "/images/Types/WaterIC_SV.png"],[null, "/images/Types/noneIC_SV.png"]]);
+const typeMap = new Map([["bug", "Images/Types/BugIC_SV.png"], ["dark", "Images/Types/DarkIC_SV.png"], ["dragon", "Images/Types/DragonIC_SV.png"], ["electric", "Images/Types/ElectricIC_SV.png"],
+["fairy", "Images/Types/FairyIC_SV.png"], ["fighting", "Images/Types/FightingIC_SV.png"], ["fire", "Images/Types/FireIC_SV.png"], ["flying", "Images/Types/FlyingIC_SV.png"], ["ghost", "Images/Types/GhostIC_SV.png"],
+["grass", "Images/Types/GrassIC_SV.png"], ["ground", "Images/Types/GroundIC_SV.png"], ["ice", "Images/Types/IceIC_SV.png"], ["normal", "Images/Types/NormalIC_SV.png"], ["poison", "Images/Types/PoisonIC_SV.png"],
+["psychic", "Images/Types/PsychicIC_SV.png"], ["rock", "Images/Types/RockIC_SV.png"], ["steel", "Images/Types/SteelIC_SV.png"], ["water", "Images/Types/WaterIC_SV.png"],[null, "Images/Types/noneIC_SV.png"]]);
 const invertedTypeMap = new Map([...typeMap].map(([key, value]) => [value, key]));
-const catType = new Map([["physical", "/images/Icons/PhysicalIC.png"], ["special", "/images/Icons/SpecialIC.png"], ["status", "/images/Icons/StatusIC.png"]
+const catType = new Map([["physical", "Images/Icons/PhysicalIC.png"], ["special", "Images/Icons/SpecialIC.png"], ["status", "Images/Icons/StatusIC.png"]
 ])
 const typeNameMap = new Map([["normal", 0], ["fire", 1], ["water", 2], ["electric", 3], ["grass", 4], ["ice", 5],
 ["fighting", 6], ["poison", 7], ["ground", 8], ["flying", 9], ["psychic", 10], ["bug", 11], ["rock", 12], ["ghost", 13],

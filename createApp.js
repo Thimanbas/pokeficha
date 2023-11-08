@@ -88,10 +88,10 @@ const statChanger = new Map([["hp", "Hp:"], ["attack", "Attack:"], ["defense", "
 //create pokemon image
 function createImage(imageFrontSrc) {
     let image = `
-    <img crossorigin="anonymous" id = "pokemon-front-image" src = "${imageFrontSrc}"></img>
+    <img  id = "pokemon-front-image" src = "Images/Pokemons/${imageFrontSrc}.png"></img>
     `
     let image2 = `
-    <img  crossorigin="anonymous" id = "pokemon-front-image-pre" src = "${imageFrontSrc}"></img>
+    <img   id = "pokemon-front-image-pre" src = "Images/Pokemons/${imageFrontSrc}.png"></img>
     `
     pokemonImage.innerHTML = image;
     pokemonPreImage.innerHTML = image2;
@@ -109,13 +109,13 @@ function createType(typeOne, typeTwo) {
 function createGender(gender) {
     if (gender == "male") {
         let imgOne = `
-        <img crossorigin="anonymous" src = "images/Icons/male.png"></img>
+        <img  src= "Images/icons/male.png"></img>
         `
         pokemonGender.innerHTML = imgOne;
     }
     if (gender == "female") {
         let imgOne = `
-        <img crossorigin="anonymous" src = "images/Icons/female.png"></img>
+        <img  src = "Images/icons/female.png"></img>
         `
         pokemonGender.innerHTML = imgOne;
     }
@@ -244,7 +244,7 @@ function checkPokemon(pokeName, preSearch) {
                 }
 
                 if (pokemonPic.src == "") {
-                    createImage(`/images/Pokemons/other/official-artwork//${data['id']}.png`);
+                    createImage(`${data['id']}`);
                 } else {
                     createImage(`${pokemonPic.src}`);
                 }
@@ -462,7 +462,7 @@ function checkPokemon(pokeName, preSearch) {
             }
             if (preSearch == true) {
                 if (pokemonPic.src == "") {
-                    createImage(`/images/Pokemons/other/official-artwork/${data['id']}.png`);
+                    createImage(`${data['id']}`);
 
                 }
                 for (i = 0; i < data['abilities'].length; i++) {
