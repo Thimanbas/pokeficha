@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokeficha</title>
     <link href="/styleIndex.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+    <link href="/style2.css" rel="stylesheet">
 
 </head>
-<body>
-    <container>
-        <div id ="cont-text">
-            <p>Faça sua escolha</p>
-        </div>
-        <div class = "cont">
-            <div >
-                <button id = "create-ficha-btn" onclick="create()"></button>
-                <label for = "create-ficha-btn">
-                    <div class ="choice-box">
-                        <spam>
-                            <p>Criar</p>
-                        </spam>
-                        <img src = "/Images/Icons/button_Create.png">
-                    </div>
-                </label>
+
+<body >
+
+
+
+    <div class="pre-choice">
+
+        <container>
+            <div id="cont-text">
+                <p>Faça sua escolha</p>
             </div>
-            <div >
-                <button id = "update-ficha-btn" onclick="update()"></button>
-                <label for = "update-ficha-btn">
-                    <div class ="choice-box">
-                        <spam>
-                            <p>Editar</p>
-                        </spam>
-                        <img src = "/Images/Icons/button_update.png">
+            <div class="cont">
+                <div>
+                    <button id="create-ficha-btn" onclick="create()"></button>
+                    <label for="create-ficha-btn">
+                        <div class="choice-box">
+                            <spam>
+                                <p>Criar</p>
+                            </spam>
+                            <img src="/Images/Icons/button_Create.png">
+                        </div>
+                    </label>
+                </div>
+                <div>
+                    <button id="update-ficha-btn" onclick="update()"></button>
+                    <label for="update-ficha-btn">
+                        <div class="choice-box">
+                            <spam>
+                                <p>Editar</p>
+                            </spam>
+                            <img src="/Images/Icons/button_update.png">
+
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+        </container>
+    </div>
     
-                    </div>
-                </label>
-            </div>
-        </div>
-        
-    </container>
+    
 </body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+
+
+
 <script>
-    function create(){
-        window.location.href = "/create.html";
-    }
-    function update(){
-        window.location.href = "/./ficha.html";
+    function create() {
+        let frame = `
+            <iframe src = "create.html" id = "create-ficha-frame"></iframe>
+        `
+        document.body.innerHTML = frame
 
     }
-
+    function update() {
+        let frame = `
+            <iframe src="/ficha.html" id = "edit-ficha-frame"></iframe>
+        `
+        document.body.innerHTML = frame
+    }
+    
 </script>
+
 </html>
